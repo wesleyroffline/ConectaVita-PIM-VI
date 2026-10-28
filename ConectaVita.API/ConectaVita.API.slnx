@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ConectaVita.API/ConectaVita.API.csproj" />
+  <Project Path="ConectaVita.Web/ConectaVita.Web.csproj" Id="4ecbe73c-914d-4560-9302-5a36dc203b44" />
+</Solution>

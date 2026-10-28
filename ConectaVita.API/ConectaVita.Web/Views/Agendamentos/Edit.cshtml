@@ -1,0 +1,34 @@
+﻿@model ConectaVita.Web.Models.AgendamentoViewModel
+@{
+    ViewData["Title"] = "Editar Agendamento";
+}
+
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="mb-3">
+                <label>Paciente</label>
+                <select asp-for="PacienteId" asp-items="ViewBag.Pacientes" class="form-select">
+                    <option value="">Selecione...</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>Fisioterapeuta</label>
+                <select asp-for="FisioterapeutaId" asp-items="ViewBag.Fisioterapeutas" class="form-select">
+                    <option value="">Selecione...</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>Data e Hora</label>
+                <input asp-for="DataHora" type="datetime-local" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label>Observações</label>
+                <textarea asp-for="Observacoes" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>

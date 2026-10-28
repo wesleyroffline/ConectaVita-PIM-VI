@@ -1,0 +1,60 @@
+@baseUrl = https://localhost:7032
+
+### Registrar usuário
+POST {{baseUrl}}/api/auth/register
+Content-Type: application/json
+
+{
+  "nome": "Admin Teste",
+  "email": "admin@conectavita.com",
+  "senha": "123456",
+  "perfil": "Admin"
+}
+
+### Fazer login
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@conectavita.com",
+  "senha": "123456"
+}
+### Criar paciente
+POST {{baseUrl}}/api/pacientes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJBZG1pbiBUZXN0ZSIsImVtYWlsIjoiYWRtaW5AY29uZWN0YXZpdGEuY29tIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNzg5OTMzNjczLCJleHAiOjE3ODk5NjI0NzMsImlhdCI6MTc4OTkzMzY3MywiaXNzIjoiQ29uZWN0YVZpdGFBUEkiLCJhdWQiOiJDb25lY3RhVml0YUFwcCJ9.Olmc-Lja_7ZB9iFIUQu93qbW3qG6XICaK8zFjVzD15k
+
+{
+  "nome": "João Silva",
+  "cpf": "123.456.789-00",
+  "telefone": "(11) 99999-9999",
+  "email": "joao@email.com",
+  "dataNascimento": "1990-05-15"
+}
+
+### Criar fisioterapeuta
+POST {{baseUrl}}/api/fisioterapeutas
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJBZG1pbiBUZXN0ZSIsImVtYWlsIjoiYWRtaW5AY29uZWN0YXZpdGEuY29tIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNzg5OTMzNjczLCJleHAiOjE3ODk5NjI0NzMsImlhdCI6MTc4OTkzMzY3MywiaXNzIjoiQ29uZWN0YVZpdGFBUEkiLCJhdWQiOiJDb25lY3RhVml0YUFwcCJ9.Olmc-Lja_7ZB9iFIUQu93qbW3qG6XICaK8zFjVzD15k
+
+{
+  "nome": "Dra. Maria Santos",
+  "especialidade": "Ortopedia",
+  "crefito": "12345-F"
+}
+
+### Listar agendamentos
+GET {{baseUrl}}/api/agendamentos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJBZG1pbiBUZXN0ZSIsImVtYWlsIjoiYWRtaW5AY29uZWN0YXZpdGEuY29tIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNzg5OTMzNjczLCJleHAiOjE3ODk5NjI0NzMsImlhdCI6MTc4OTkzMzY3MywiaXNzIjoiQ29uZWN0YVZpdGFBUEkiLCJhdWQiOiJDb25lY3RhVml0YUFwcCJ9.Olmc-Lja_7ZB9iFIUQu93qbW3qG6XICaK8zFjVzD15k
+
+### Criar agendamento
+POST {{baseUrl}}/api/agendamentos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJBZG1pbiBUZXN0ZSIsImVtYWlsIjoiYWRtaW5AY29uZWN0YXZpdGEuY29tIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNzg5OTMzNjczLCJleHAiOjE3ODk5NjI0NzMsImlhdCI6MTc4OTkzMzY3MywiaXNzIjoiQ29uZWN0YVZpdGFBUEkiLCJhdWQiOiJDb25lY3RhVml0YUFwcCJ9.Olmc-Lja_7ZB9iFIUQu93qbW3qG6XICaK8zFjVzD15k
+
+{
+  "pacienteId": 1,
+  "fisioterapeutaId": 1,
+  "dataHora": "2026-09-25T14:00:00",
+  "observacoes": "Sessão de fisioterapia"
+}

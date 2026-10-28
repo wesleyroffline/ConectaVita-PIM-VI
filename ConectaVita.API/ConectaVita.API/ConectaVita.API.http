@@ -1,0 +1,6 @@
+@ConectaVita.API_HostAddress = http://localhost:5161
+
+GET {{ConectaVita.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

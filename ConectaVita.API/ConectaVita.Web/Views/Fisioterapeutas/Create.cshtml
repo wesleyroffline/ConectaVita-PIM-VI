@@ -1,0 +1,25 @@
+﻿@model ConectaVita.Web.Models.FisioterapeutaViewModel
+@{
+    ViewData["Title"] = "Novo Fisioterapeuta";
+}
+
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label>Nome</label>
+                <input asp-for="Nome" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label>Especialidade</label>
+                <input asp-for="Especialidade" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label>CREFITO</label>
+                <input asp-for="CREFITO" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+# ===== .NET =====
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+
+# ===== Flutter / Dart =====
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# ===== Banco de Dados SQLite =====
+*.db
+*.db-shm
+*.db-wal
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# ===== Sistema =====
+Thumbs.db
+.DS_Store
